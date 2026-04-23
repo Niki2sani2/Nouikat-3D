@@ -7,76 +7,136 @@
 
     <style>
         body {
+            margin: 0;
             font-family: Arial;
-            background: #111;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
             color: white;
             text-align: center;
-            margin: 0;
+        }
+
+        header {
+            padding: 30px 20px;
         }
 
         h1 {
-            margin: 20px;
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
         }
 
         .product {
-            background: #1a1a1a;
-            margin: 20px;
-            padding: 20px;
+            background: #151515;
+            margin: 15px;
+            padding: 15px;
             border-radius: 15px;
+            width: 280px;
+
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
         }
 
         img {
-            width: 90%;
-            max-width: 300px;
+            width: 100%;
             border-radius: 10px;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        p {
+            opacity: 0.7;
+            font-size: 14px;
         }
 
         button {
-            margin-top: 15px;
-            padding: 12px 25px;
-            font-size: 16px;
+            margin-top: 10px;
+            padding: 12px;
+            width: 100%;
             border: none;
             border-radius: 10px;
-            background: #ff4d4d;
+
+            background: linear-gradient(45deg, #ff4d4d, #ff0000);
             color: white;
+            font-size: 16px;
+
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
-            background: #ff1a1a;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.5;
+            font-size: 12px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>🔥 Meine Produkte 🔥</h1>
+    <header>
+        <h1>Nouikat-3D</h1>
+        <div class="subtitle">3D-gedruckte Designs – minimal & einzigartig</div>
+    </header>
 
-    <!-- PRODUKT 1 -->
-    <div class="product">
-        <h2>Beton Mini Car</h2>
+    <div class="container">
 
-        <img src="https://via.placeholder.com/300" alt="Produkt">
+        <!-- PRODUKT 1 -->
+        <div class="product">
+            <img src="DEIN-BILD1.jpg">
+            <h2>Mini Car Model</h2>
+            <p>Minimalistisches 3D Modell – perfekt für dein Setup.</p>
+            <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
+                Auf Willhaben kaufen
+            </button>
+        </div>
 
-        <p>Handgemacht. Minimalistisch. Perfekt für dein Setup.</p>
+        <!-- PRODUKT 2 -->
+        <div class="product">
+            <img src="DEIN-BILD2.jpg">
+            <h2>Desk Gadget</h2>
+            <p>Sauberes Design für deinen Schreibtisch.</p>
+            <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
+                Jetzt ansehen
+            </button>
+        </div>
 
-        <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
-            Auf Willhaben ansehen
-        </button>
+        <!-- PRODUKT 3 -->
+        <div class="product">
+            <img src="DEIN-BILD3.jpg">
+            <h2>Custom Print</h2>
+            <p>Individuell gedruckt – auf Anfrage möglich.</p>
+            <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
+                Anfrage senden
+            </button>
+        </div>
+
     </div>
 
-    <!-- PRODUKT 2 -->
-    <div class="product">
-        <h2>Special Edition</h2>
-
-        <img src="https://via.placeholder.com/300" alt="Produkt">
-
-        <p>Limitierte Version – nur wenige verfügbar.</p>
-
-        <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
-            Jetzt kaufen
-        </button>
-    </div>
+    <footer>
+        © 2026 Nouikat-3D
+    </footer>
 
 </body>
 </html>
