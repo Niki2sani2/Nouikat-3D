@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Nouikat-3D</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -11,76 +10,78 @@
             font-family: Arial;
             background: #0a0a0a;
             color: white;
-            text-align: center;
+            scroll-behavior: smooth;
         }
 
+        /* HEADER */
         header {
+            text-align: center;
             padding: 40px 20px;
-            position: relative;
         }
 
-        /* Logo */
         .logo {
             width: 120px;
-            margin-bottom: 10px;
         }
 
         h1 {
-            margin: 0;
             font-size: 34px;
             letter-spacing: 3px;
+            margin: 10px 0;
         }
 
         .subtitle {
             opacity: 0.6;
-            margin-top: 10px;
         }
 
-        /* Polaroid Style Linie */
-        .color-line {
-            width: 120px;
-            height: 4px;
-            margin: 15px auto;
-            border-radius: 5px;
-            background: linear-gradient(90deg, #00c2ff, #8cff00, #ffd000, #ff3c3c);
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            z-index: 10;
         }
 
-        /* Glow Effekt passend zum Logo */
-        .glow {
-            position: absolute;
-            top: -120px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255,0,0,0.2), transparent);
-            filter: blur(120px);
-            z-index: -1;
+        nav a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 60px 20px;
+            text-align: center;
         }
 
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 10px;
         }
 
-        .product {
-            background: rgba(255,255,255,0.03);
-            margin: 15px;
-            padding: 15px;
-            border-radius: 15px;
+        .card {
             width: 280px;
-
-            backdrop-filter: blur(10px);
+            margin: 15px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.05);
-
-            box-shadow: 0px 15px 40px rgba(0,0,0,0.6);
             transition: 0.3s;
         }
 
-        .product:hover {
-            transform: translateY(-10px) scale(1.02);
+        .card:hover {
+            transform: scale(1.05);
         }
 
         img {
@@ -88,38 +89,20 @@
             border-radius: 10px;
         }
 
-        h2 {
-            margin: 10px 0;
-        }
-
-        p {
-            opacity: 0.6;
-            font-size: 14px;
-        }
-
-        /* Button mit Logo Farben */
         button {
             margin-top: 10px;
-            padding: 12px;
             width: 100%;
+            padding: 12px;
             border: none;
             border-radius: 10px;
-
             background: linear-gradient(90deg, #00c2ff, #8cff00, #ffd000, #ff3c3c);
-            color: black;
             font-weight: bold;
-
             cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            transform: scale(1.05);
         }
 
         footer {
-            margin-top: 40px;
-            padding: 20px;
+            text-align: center;
+            padding: 30px;
             opacity: 0.4;
             font-size: 12px;
         }
@@ -128,59 +111,86 @@
 
 <body>
 
-    <header>
-        <div class="glow"></div>
+<!-- HEADER -->
+<header>
+    <img src="3D-Logo.png" class="logo">
+    <h1>Nouikat-3D</h1>
+    <div class="subtitle">Minimal Designs • 3D Prints • Custom Work</div>
+</header>
 
-        <img src="3D-Logo.png" class="logo">
+<!-- NAVIGATION -->
+<nav>
+    <a href="#deko">Deko</a>
+    <a href="#auto">Auto & Moto</a>
+    <a href="#custom">Custom</a>
+</nav>
 
-        <h1>Nouikat-3D</h1>
-
-        <div class="color-line"></div>
-
-        <div class="subtitle">3D-Designs – minimalistisch & einzigartig</div>
-
-        <p style="opacity:0.5; font-size:12px;">
-            Handmade • 3D Printed • Limited Pieces
-        </p>
-    </header>
+<!-- DEKO -->
+<section id="deko">
+    <h2>Deko Figuren</h2>
 
     <div class="container">
 
-        <!-- PRODUKT 1 -->
-        <div class="product">
+        <div class="card">
             <img src="3D-1.jpg">
-            <h2>Mini Models</h2>
-            <p>Minimalistisches 3D Modell – perfekt für dein Zuhause.</p>
+            <h3>Mini Model</h3>
+            <p>Minimalistische Design Figur</p>
             <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
-                Auf Willhaben kaufen
+                Willhaben kaufen
             </button>
         </div>
 
-        <!-- PRODUKT 2 -->
-        <div class="product">
+        <div class="card">
+            <img src="3D-3.jpg">
+            <h3>Car Sculpture</h3>
+            <p>Abstraktes Auto Design</p>
+            <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
+                Willhaben kaufen
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- AUTO -->
+<section id="auto">
+    <h2>Auto & Motorrad Zubehör</h2>
+
+    <div class="container">
+
+        <div class="card">
             <img src="3D-2.jpg">
-            <h2>Car/Motorcycle Gadget</h2>
-            <p>Sauberes Design für dein Spiezeug.</p>
+            <h3>Car Interior Gadget</h3>
+            <p>Clean Upgrade für dein Auto</p>
             <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
                 Jetzt ansehen
             </button>
         </div>
 
-        <!-- PRODUKT 3 -->
-        <div class="product">
-            <img src="3D-3.jpg">
-            <h2>Custom Print</h2>
-            <p>Individuell gedruckt – auf Anfrage möglich.</p>
-            <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
-                Anfrage senden
-            </button>
-        </div>
-
     </div>
+</section>
 
-    <footer>
-        © 2026 Nouikat-3D
-    </footer>
+<!-- CUSTOM -->
+<section id="custom">
+    <h2>3D Druck auf Anfrage</h2>
+
+    <p style="opacity:0.7; max-width:600px; margin:auto;">
+        Du hast eine Idee? Ich setze sie als 3D Druck um.
+        Von Prototyp bis Designstück.
+    </p>
+
+    <div class="card" style="margin:30px auto;">
+        <h3>Custom Projekt</h3>
+        <p>Individuell nach Wunsch</p>
+        <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
+            Anfrage starten
+        </button>
+    </div>
+</section>
+
+<footer>
+    © 2026 Nouikat-3D
+</footer>
 
 </body>
 </html>
