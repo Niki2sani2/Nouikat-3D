@@ -10,13 +10,13 @@
             font-family: Arial;
             background: #0a0a0a;
             color: white;
-            scroll-behavior: smooth;
         }
 
-        /* HEADER */
+        /* HERO */
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px 30px;
+            position: relative;
         }
 
         .logo {
@@ -24,13 +24,28 @@
         }
 
         h1 {
-            font-size: 34px;
-            letter-spacing: 3px;
+            font-size: 38px;
             margin: 10px 0;
+            letter-spacing: 3px;
         }
 
-        .subtitle {
-            opacity: 0.6;
+        .hook {
+            max-width: 700px;
+            margin: auto;
+            opacity: 0.8;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .cta-top {
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #00c2ff, #8cff00, #ffd000, #ff3c3c);
+            font-weight: bold;
+            cursor: pointer;
+            width: 220px;
         }
 
         /* NAV */
@@ -41,8 +56,8 @@
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 10px;
+            gap: 25px;
+            padding: 12px;
             border-bottom: 1px solid rgba(255,255,255,0.05);
             z-index: 10;
         }
@@ -50,15 +65,15 @@
         nav a {
             color: white;
             text-decoration: none;
-            opacity: 0.7;
-            font-size: 14px;
+            opacity: 0.6;
+            font-size: 13px;
         }
 
         nav a:hover {
             opacity: 1;
         }
 
-        /* SECTIONS */
+        /* SECTION */
         section {
             padding: 60px 20px;
             text-align: center;
@@ -70,23 +85,32 @@
             justify-content: center;
         }
 
-        .card {
+        .product {
             width: 280px;
             margin: 15px;
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.05);
             transition: 0.3s;
         }
 
-        .card:hover {
+        .product:hover {
             transform: scale(1.05);
         }
 
         img {
             width: 100%;
             border-radius: 10px;
+        }
+
+        .title {
+            margin: 10px 0 5px;
+        }
+
+        .desc {
+            opacity: 0.6;
+            font-size: 13px;
         }
 
         button {
@@ -100,10 +124,18 @@
             cursor: pointer;
         }
 
+        /* TRUST SECTION */
+        .trust {
+            opacity: 0.6;
+            font-size: 13px;
+            max-width: 600px;
+            margin: auto;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
-            opacity: 0.4;
+            opacity: 0.3;
             font-size: 12px;
         }
     </style>
@@ -111,19 +143,37 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- HERO -->
 <header>
     <img src="3D-Logo.png" class="logo">
     <h1>Nouikat-3D</h1>
-    <div class="subtitle">Minimal Designs • 3D Prints • Custom Work</div>
+
+    <div class="hook">
+        Minimalistische 3D Designs & Custom Prints.<br>
+        Keine Massenware. Jedes Stück wird bewusst designed und limitiert verkauft.
+    </div>
+
+    <button class="cta-top" onclick="location.href='#shop'">
+        Produkte ansehen
+    </button>
 </header>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
     <a href="#deko">Deko</a>
-    <a href="#auto">Auto & Moto</a>
+    <a href="#auto">Auto</a>
     <a href="#custom">Custom</a>
 </nav>
+
+<!-- TRUST -->
+<section>
+    <div class="trust">
+        ✔ Handmade / 3D Print Produktion<br>
+        ✔ Kein Massenprodukt – kleine Stückzahlen<br>
+        ✔ Direkt über Willhaben kaufbar<br>
+        ✔ Fokus auf Design + Qualität statt Quantität
+    </div>
+</section>
 
 <!-- DEKO -->
 <section id="deko">
@@ -131,21 +181,21 @@
 
     <div class="container">
 
-        <div class="card">
+        <div class="product">
             <img src="3D-1.jpg">
-            <h3>Mini Model</h3>
-            <p>Minimalistische Design Figur</p>
+            <div class="title">Mini Model</div>
+            <div class="desc">Clean minimalist Design für Setup & Raum</div>
             <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
-                Willhaben kaufen
+                Jetzt kaufen
             </button>
         </div>
 
-        <div class="card">
+        <div class="product">
             <img src="3D-3.jpg">
-            <h3>Car Sculpture</h3>
-            <p>Abstraktes Auto Design</p>
+            <div class="title">Car Sculpture</div>
+            <div class="desc">Abstrakte Form – Design Objekt</div>
             <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
-                Willhaben kaufen
+                Jetzt kaufen
             </button>
         </div>
 
@@ -154,14 +204,14 @@
 
 <!-- AUTO -->
 <section id="auto">
-    <h2>Auto & Motorrad Zubehör</h2>
+    <h2>Auto & Moto</h2>
 
     <div class="container">
 
-        <div class="card">
+        <div class="product">
             <img src="3D-2.jpg">
-            <h3>Car Interior Gadget</h3>
-            <p>Clean Upgrade für dein Auto</p>
+            <div class="title">Car Interior Gadget</div>
+            <div class="desc">Minimal Upgrade für dein Cockpit</div>
             <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
                 Jetzt ansehen
             </button>
@@ -172,16 +222,16 @@
 
 <!-- CUSTOM -->
 <section id="custom">
-    <h2>3D Druck auf Anfrage</h2>
+    <h2>Custom 3D Druck</h2>
 
-    <p style="opacity:0.7; max-width:600px; margin:auto;">
-        Du hast eine Idee? Ich setze sie als 3D Druck um.
-        Von Prototyp bis Designstück.
-    </p>
+    <div class="trust">
+        Du hast eine Idee? Ich baue sie als 3D Objekt.<br>
+        Von Ersatzteilen bis Design-Prototypen.
+    </div>
 
-    <div class="card" style="margin:30px auto;">
-        <h3>Custom Projekt</h3>
-        <p>Individuell nach Wunsch</p>
+    <div class="product" style="margin-top:30px;">
+        <div class="title">Custom Projekt</div>
+        <div class="desc">Individuelle Anfrage</div>
         <button onclick="window.open('https://www.willhaben.at/DEIN-LINK')">
             Anfrage starten
         </button>
